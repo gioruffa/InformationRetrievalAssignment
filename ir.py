@@ -75,7 +75,9 @@ if __name__ == "__main__":
 
     print()
     print("The text snippet is: ")
-    print(args.snippet_content)
+    pp.pprint(args.snippet_content)
+
+    print()
 
     raw_corpus = load_raw_corpus(args.corpus_folder)
     cleaned_corpus = clean_raw_corpus(raw_corpus)
@@ -124,7 +126,7 @@ if __name__ == "__main__":
     # get the users interested in the category
     interested_users = user_profiles_df[user_profiles_df[closest_doc['category']] == 1].index.values
     print()
-    print("The user interested in the topic {} are: {}".format(closest_doc['category'], interested_users))
+    print("The user id interested in the topic {} are: {}".format(closest_doc['category'], interested_users))
 
 
 
