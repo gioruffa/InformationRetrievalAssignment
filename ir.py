@@ -50,6 +50,7 @@ def clean_raw_corpus(loaded_corpus):
         doc['cleaned_content'] = clean_raw_doc(doc['raw_content'])
     return loaded_corpus
 
+
 def generate_user_profiles(num_users = 5):
     fashion = np.random.randint(2, size=num_users)
     cars = np.random.randint(2, size=num_users)
@@ -114,7 +115,8 @@ if __name__ == "__main__":
     ranked_docs = sorted(enumerate(sim), key=lambda x: x[1], reverse=True)
     # pp.pprint(ranked_docs[:5])
 
-    closest_doc = cleaned_corpus[ranked_docs[0][0]]  # the closest doc will get us the category to which te query belongs
+    # the closest doc will get us the category to which te query belongs
+    closest_doc = cleaned_corpus[ranked_docs[0][0]]
 
     print(
         "The closest document to the text snippet belongs to the category \"{}\" and its content is:".format(
