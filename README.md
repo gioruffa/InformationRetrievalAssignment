@@ -16,7 +16,7 @@ To each corpus document is associated a category, identified by the letter in th
 The user profiles are generated randomly and stored in a pandas dataframe.
 
 The incoming text snippet is preprocessed in the same way and represented in the tfidf model as a query. 
-Then the cosine distance with all the documents is calculated. The closest document is picked to determine the category
+Then the cosine with all the document vectors is calculated and used for the ranking. The closest document is picked to determine the category
 of the query (pizza, fashion or cars), and then delivered to the interested user profiles.
 
 
@@ -49,3 +49,5 @@ The closest document to the text snippet belongs to the category "pizza" and its
 The user id interested in the topic pizza are: [1 4]
 ```
 
+## Resources
+We extensively used [this gensim tutorial](https://radimrehurek.com/gensim/tutorial.html) to build and use the tfidf model.
