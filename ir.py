@@ -1,4 +1,8 @@
 #!/usr/bin/python
+#
+#   Authors: Giorgio Ruffa - Federico Ungolo
+#
+
 import os
 import glob
 from collections import defaultdict
